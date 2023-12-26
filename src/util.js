@@ -61,7 +61,7 @@ export function getComputedStyle (elem, prop, pseudo) {
 }
 
 export function getRenderInfo (elem) {
-  if (!document.documentElement.contains(elem)) {
+  if (!elem || !document.documentElement.contains(elem)) {
     return {
       detached: true,
       rendered: false
@@ -69,7 +69,7 @@ export function getRenderInfo (elem) {
   }
 
   let current = elem
-  while (current !== document) {
+  while (current && current !== document) {
     if (getComputedStyle(current, 'display') === 'none') {
       return {
         detached: false,

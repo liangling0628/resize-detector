@@ -1,9 +1,8 @@
 {
-  "name": "resize-detector",
-  "version": "0.3.0",
+  "name": "@blueking/fork-resize-detector",
+  "version": "0.0.2",
   "description": "Element resize detection, both modern way and cross browser.",
-  "main": "dist/index.js",
-  "module": "esm/index.js",
+  "main": "esm/index.js",
   "scripts": {
     "build": "rollup -c",
     "prepare": "npm run build"
@@ -13,7 +12,11 @@
     "resize",
     "observer"
   ],
-  "author": "Justineo (justice360@gmail.com)",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "",
   "license": "MIT",
   "repository": "Justineo/resize-detector",
   "devDependencies": {
